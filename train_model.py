@@ -6,7 +6,7 @@ trains a Random Forest model,
 evaluates it,
 and saves the trained model.
 
-Author: ChatGPT
+Author: Kehinde_Oni
 """
 
 import random

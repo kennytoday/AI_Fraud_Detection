@@ -4,7 +4,7 @@ model.py
 
 Loads the trained fraud detection model and performs predictions.
 
-Author: ChatGPT
+Author: Kehinde_Oni
 """
 
 import os

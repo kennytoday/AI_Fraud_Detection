@@ -3,7 +3,7 @@ Fraud Detection System
 ----------------------
 Part 1 - User Interface
 
-Author: ChatGPT
+Author: Kehinde_Oni
 
 """
 
