@@ -1,62 +1,66 @@
 # Fraud Detection System
 
-A desktop application for analyzing individual transactions for fraud risk, built with Python and Tkinter for the interface and a scikit-learn model for prediction.
+![Interface](<Screenshot (39)-1.png>) ![Test 1](<Screenshot (40)-1.png>) ![Test 2](<Screenshot (37)-1.png>) ![Test 3](<Screenshot (38)-1.png>)
 
-## Overview
-
-The app takes in details about a single transaction, runs them through a trained classifier, and shows:
-- A fraud / legitimate verdict
-- A confidence score (how likely the transaction is fraudulent)
-- A risk level (Low / Medium / High / Critical)
-- The specific factors that drove the result
-- A running history of predictions made during the session, exportable to CSV
+A simple desktop app that predicts whether a bank transaction is **fraudulent** or **legitimate** using a Random Forest machine learning model.
 
 ## Files
 
-| File | Purpose |
-|---|---|
-| `app.py` | Tkinter UI — collects transaction details, displays results, manages history and CSV export |
-| `model.py` | `FraudDetector` class — trains (or loads) a `RandomForestClassifier` and exposes `predict`, `risk_level`, and `risk_factors` |
-| `fraud_model.pkl` | Auto-generated on first run — the cached trained model, so training only happens once |
+| File                | Purpose |
+|---------------------|---------|
+| `train_model.py`    | Generates synthetic data, trains the model, saves `fraud_model.pkl` |
+| `model.py`          | Loads the trained model and makes predictions |
+| `app.py`            | The graphical user interface (Tkinter) with Risk Analysis widget |
+| `fraud_model.pkl`   | The trained model (created by `train_model.py`) |
+| `transactions.csv`  | The synthetic dataset (created by `train_model.py`) |
 
-## Requirements
+## How to Run
 
-```
-pip install scikit-learn numpy joblib
-```
+1. Install the required libraries (one time):
 
-Tkinter ships with most standard Python installs; if it's missing on Linux, install it via your package manager (e.g. `sudo apt install python3-tk`).
-
-## Running it
-
-```
-python3 app.py
+```bash
+pip install pandas scikit-learn joblib
 ```
 
-On first launch, `model.py` trains a new model on synthetic transaction data and saves it as `fraud_model.pkl` in the same folder. Subsequent launches load that file directly, so startup is fast after the first run.
+2. Train the model (creates `fraud_model.pkl`):
 
-## Using the app
+```bash
+python train_model.py
+```
 
-1. Enter the transaction **Amount**, **Hour (0–23)**, and number of **Previous Transactions** for the account.
-2. Select **Yes/No** for whether the transaction is **International**, from a **New Device**, or from a **High Risk Country**.
-3. Click **Predict** to see the verdict, confidence, and risk factors.
-4. Click **Clear** to reset the form.
-5. Click **Export History** to save every prediction made this session to a CSV file.
+3. Start the app:
 
-## About the model
+```bash
+python app.py
+```
 
-`FraudDetector` is currently trained on **synthetically generated data**, not real transactions. The synthetic data is built so that fraud likelihood rises with:
-- Higher transaction amounts
-- Late-night / early-morning hours (0–5)
-- Thin transaction history (few previous transactions)
-- International transactions
-- New devices
-- High-risk countries
+## What the Risk Analysis Widget Does
 
-This makes the model behave sensibly for testing and demoing the UI, but it should **not** be treated as production-accurate. To use it on real data, replace `_generate_dataset()` in `model.py` with a loader for your actual labeled transaction dataset, then delete `fraud_model.pkl` so it retrains.
+Under the progress bar you will see:
 
-## Known limitations
+- A bold colored label showing **LOW** / **MEDIUM** / **HIGH**
+- A short list of human-readable reasons (e.g. “Large transaction amount”, “New device used”)
 
-- No persistence of prediction history between sessions (it's in-memory only, cleared on close — use Export History to keep a record)
-- Single-transaction predictions only; no batch/CSV upload for scoring multiple transactions at once
-- Model is a demo baseline, not tuned or validated against real fraud data
+These come from the `risk_level()` and `risk_factors()` methods in `model.py`.
+
+## Ideas for Future Improvements
+
+- **Fill Sample button** – one click fills realistic test values so you can demo the app quickly.
+- **Better explanations** – use the model’s feature importances or SHAP values instead of the simple rules.
+- **Dark mode** – add a theme toggle.
+- **Batch prediction** – let the user upload a CSV of many transactions.
+- **Logging** – save every prediction to a database or log file automatically.
+- **Validation messages** – show red borders or tooltips on the entry fields instead of pop-ups.
+- **Unit tests** – add a few simple tests for `model.py`.
+- **Packaging** – turn the app into a single `.exe` with PyInstaller so non-programmers can run it.
+- **Real data** – replace the synthetic dataset with real (anonymized) transaction data.
+- **More features** – add things like merchant category, distance from home, time since last transaction, etc.
+
+## Notes for Rookies
+
+- The model expects exactly these 6 features in this order:  
+  `Amount, Hour, PreviousTransactions, International, NewDevice, HighRiskCountry`
+- If you see the error “Model not found”, run `train_model.py` first.
+- The risk-factor list is **not** generated by the machine learning model itself.  
+  It is a simple set of rules written by hand so the user can understand *why* something looks risky.
+- `train_model.py` uses **synthetic** (fake) data. The accuracy you see is only on this fake data — real-world fraud detection is much harder.
