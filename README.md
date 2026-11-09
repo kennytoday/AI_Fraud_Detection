@@ -1,7 +1,6 @@
 AI-Powered Fraud Detection System Using Machine Learning
 
-1. Project Overview
-
+1. **Project Overview**
 The AI-Powered Fraud Detection System is an independent machine learning project exploring how artificial intelligence can be applied to identifying potentially fraudulent financial transactions.
 
 The project uses a Random Forest classification model to analyse transaction-related information and estimate whether a transaction may represent legitimate or potentially fraudulent activity.
@@ -10,7 +9,7 @@ The application provides an experimental environment for understanding how machi
 
 The project was developed using Python and associated machine learning technologies, with an application interface for interacting with the prediction system.
 
-2. Background and Motivation
+2. **Background and Motivation**
 
 The increasing use of digital banking, electronic payments and online financial services has created opportunities for faster and more accessible financial transactions.
 
@@ -22,7 +21,7 @@ I developed this project to gain practical experience in applying supervised mac
 
 It also provided an opportunity to explore how predictive models can be integrated into software applications to make machine learning outputs more accessible to users.
 
-3. Problem Identification
+3. **Problem Identification**
 
 Financial transactions can vary considerably in their characteristics, making it challenging to identify potentially fraudulent activity through simple observation alone.
 
@@ -35,7 +34,7 @@ The system analyses available transaction features and uses a trained classifica
 
 The objective is to demonstrate how data-driven approaches can support preliminary fraud-risk identification.
 
-4. Project Objectives
+4. **Project Objectives**
 
 The main objectives were to:
 
@@ -47,7 +46,7 @@ The main objectives were to:
 6. Explore how machine learning outputs can be presented through a user interface.
 7. Understand the limitations of synthetic datasets and experimental fraud detection models.
 
-5. Technologies and Tools
+5. **Technologies and Tools**
 
 Technology| Application
 Python| Main programming language
@@ -58,7 +57,7 @@ Random Forest| Classification algorithm
 Streamlit| Application interface, if used in the current implementation
 Matplotlib / Seaborn| Data visualisation, where applicable
 
-6. Dataset and Data Preparation
+6. **Dataset and Data Preparation**
 
 The project uses a synthetic financial transaction dataset for development and experimentation.
 
@@ -74,9 +73,9 @@ The data preparation process includes:
 - Splitting the data into training and testing subsets.
 - Preparing the data for model training and evaluation.
 
-Important: The synthetic dataset does not necessarily represent the complexity, distribution or behaviour of real-world financial fraud.
+**Important**: The synthetic dataset does not necessarily represent the complexity, distribution or behaviour of real-world financial fraud.
 
-7. Machine Learning Implementation
+7. **Machine Learning Implementation**
 
 7.1 Random Forest Classification
 
@@ -105,7 +104,7 @@ The prediction indicates whether the transaction is classified as legitimate or 
 
 The output is intended to demonstrate the model's classification capability rather than establish that a transaction is genuinely fraudulent.
 
-8. Application Features
+8. **Application Features**
 
 The application explores the following functionality:
 
@@ -117,7 +116,7 @@ The application explores the following functionality:
 
 Add screenshots of the actual application here to demonstrate the implemented functionality.
 
-9. Repository Structure
+9. **Repository Structure**
 
 The repository contains the machine learning implementation, application components and supporting resources.
 
@@ -139,7 +138,7 @@ AI_Fraud_Detection/
 ├── README.md
 └── other project files
 
-10. Installation and Setup
+10. **Installation and Setup**
 
 Prerequisites
 
@@ -178,7 +177,7 @@ streamlit run app.py
 
 Confirm that app.py is the actual entry point before publishing this instruction.
 
-11. Model Evaluation
+11. **Model Evaluation**
 
 Model evaluation is an important part of understanding the effectiveness of a fraud detection classifier.
 
