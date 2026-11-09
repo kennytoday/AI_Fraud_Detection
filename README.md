@@ -1,6 +1,8 @@
 AI-Powered Fraud Detection System Using Machine Learning.
 
-![Image1](<Screenshot (39)-1-1.pImage1](<Screenshot (40)-1-1.pImage1](<Screenshot (37)-1-1.pImage1](<Screenshot (38)-1-1.png>)
+![image1](<Screenshot (40)-1-1.png>)
+![Image2](<Screenshot (39)-1-1.png>)
+![Image3](<Screenshot (37)-1-1.png>)
 
 1. **Project Overview**
 The AI-Powered Fraud Detection System is an independent machine learning project exploring how artificial intelligence can be applied to identifying potentially fraudulent financial transactions.
