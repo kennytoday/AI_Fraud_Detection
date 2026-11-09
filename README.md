@@ -1,4 +1,6 @@
-AI-Powered Fraud Detection System Using Machine Learning
+AI-Powered Fraud Detection System Using Machine Learning.
+
+![Image1](<Screenshot (39)-1-1.pImage1](<Screenshot (40)-1-1.pImage1](<Screenshot (37)-1-1.pImage1](<Screenshot (38)-1-1.png>)
 
 1. **Project Overview**
 The AI-Powered Fraud Detection System is an independent machine learning project exploring how artificial intelligence can be applied to identifying potentially fraudulent financial transactions.
@@ -96,7 +98,7 @@ The development workflow involves:
 5. Evaluating the trained model using appropriate classification metrics.
 6. Integrating the model into the application.
 
-7.3 Transaction Prediction
+7.3 **Transaction Prediction**
 
 When transaction information is entered into the application, the trained model processes the input features and generates a prediction.
 
@@ -108,11 +110,11 @@ The output is intended to demonstrate the model's classification capability rath
 
 The application explores the following functionality:
 
-- Accepting transaction-related input information.
-- Processing inputs through a trained machine learning model.
-- Generating transaction classification predictions.
-- Presenting prediction results through an application interface.
-- Supporting experimentation with different transaction inputs.
+•	Accepting transaction-related input information.
+•	Processing inputs through a trained machine learning model.
+•	Generating transaction classification predictions.
+•	Presenting prediction results through an application interface.
+•	Supporting experimentation with different transaction inputs.
 
 Add screenshots of the actual application here to demonstrate the implemented functionality.
 
@@ -142,9 +144,9 @@ AI_Fraud_Detection/
 
 Prerequisites
 
-- Python 3.10 or a compatible version.
-- pip package manager.
-- Git.
+•	Python 3.10 or a compatible version.
+•	pip package manager.
+•	Git.
 
 Clone the repository
 
@@ -183,11 +185,11 @@ Model evaluation is an important part of understanding the effectiveness of a fr
 
 The following metrics are relevant to this project:
 
-- Accuracy: Overall proportion of correctly classified transactions.
-- Precision: Proportion of transactions predicted as fraudulent that are actually labelled fraudulent in the test dataset.
-- Recall: Proportion of fraudulent-labelled transactions correctly identified by the model.
-- F1-score: Balance between precision and recall.
-- Confusion Matrix: Breakdown of correct and incorrect classifications.
+•	Accuracy: Overall proportion of correctly classified transactions.
+•	Precision: Proportion of transactions predicted as fraudulent that are actually labelled fraudulent in the test dataset.
+•	Recall: Proportion of fraudulent-labelled transactions correctly identified by the model.
+•	F1-score: Balance between precision and recall.
+•	Confusion Matrix: Breakdown of correct and incorrect classifications.
 
 For fraud detection, precision and recall are particularly important because false positives and false negatives have different operational consequences.
 
@@ -199,13 +201,13 @@ Because the dataset is synthetic, these results should not be interpreted as evi
 
 This project is an independent machine learning development exercise and has several limitations:
 
-- The model was developed using synthetic transaction data.
-- Synthetic patterns may not reflect real financial fraud behaviour.
-- The model may not generalise to actual banking environments.
-- False positives may incorrectly flag legitimate transactions.
-- False negatives may fail to identify suspicious transactions.
-- The project does not integrate with live banking systems.
-- The model has not been independently validated for financial institution deployment.
+•	The model was developed using synthetic transaction data.
+•	Synthetic patterns may not reflect real financial fraud behaviour.
+•	The model may not generalise to actual banking environments.
+•	False positives may incorrectly flag legitimate transactions.
+•	False negatives may fail to identify suspicious transactions.
+•	The project does not integrate with live banking systems.
+•	The model has not been independently validated for financial institution deployment.
 
 The system should therefore be viewed as an experimental demonstration of machine learning classification rather than an operational fraud prevention solution.
 
@@ -213,14 +215,14 @@ The system should therefore be viewed as an experimental demonstration of machin
 
 Potential future improvements include:
 
-- Exploring larger and more representative transaction datasets.
-- Comparing Random Forest with other classification algorithms.
-- Investigating class imbalance and appropriate resampling techniques.
-- Improving model explainability and feature importance analysis.
-- Introducing more detailed model evaluation.
-- Exploring real-time transaction processing.
-- Investigating model monitoring and performance drift.
-- Exploring secure integration with financial transaction monitoring systems.
+•	Exploring larger and more representative transaction datasets.
+•	Comparing Random Forest with other classification algorithms.
+•	Investigating class imbalance and appropriate resampling techniques.
+•	Improving model explainability and feature importance analysis.
+•	Introducing more detailed model evaluation.
+•	Exploring real-time transaction processing.
+•	Investigating model monitoring and performance drift.
+•	Exploring secure integration with financial transaction monitoring systems.
 
 Any future use with real financial data would require appropriate data protection, security, governance and validation measures.
 
