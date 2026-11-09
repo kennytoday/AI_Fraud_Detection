@@ -4,7 +4,9 @@ AI-Powered Fraud Detection System Using Machine Learning.
 ![Image2](<Screenshot (39)-1-1.png>)
 ![Image3](<Screenshot (37)-1-1.png>)
 
+
 1. **Project Overview**
+
 The AI-Powered Fraud Detection System is an independent machine learning project exploring how artificial intelligence can be applied to identifying potentially fraudulent financial transactions.
 
 The project uses a Random Forest classification model to analyse transaction-related information and estimate whether a transaction may represent legitimate or potentially fraudulent activity.
